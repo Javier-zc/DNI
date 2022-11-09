@@ -7,7 +7,7 @@
 
     <body>
         <form method="post">
-            Nombre: <input type="text" name="nombre"><br>
+            Nombre: <input type="text" name="nombre" required><br>
             Número de DNI: <input type="number" min="0" max="99999999" name="numberOfDNI" required><br>
             <input type="submit" name="ok" value="Enviar">
 
@@ -42,6 +42,8 @@
                         "No se ha podido guardar";
                     }
                 }
+
+                mysqli_close($conexion);
                 
                 
             }
